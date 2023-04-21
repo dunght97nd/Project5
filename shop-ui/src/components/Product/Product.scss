@@ -1,0 +1,123 @@
+.productCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: calc(25% - 25px);
+  margin-bottom: 25px;
+  margin-left: 25px;
+  box-shadow: 0 3px 4px 0 rgb(0 0 0 / 10%);
+
+  .img {
+    // min-width: 290px;
+    // height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+
+    @media only screen and (max-width: 380px) {
+      min-width: 172px;
+      height: 230px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s ease;
+    }
+    &:hover img {
+      scale: 1.1;
+    }
+    &:hover .info {
+      opacity: 1;
+    }
+    .status {
+      font-size: 14px;
+      position: absolute;
+      padding: 10px 20px;
+      top: 0;
+      right: 0;
+      background-color: rgba($color: white, $alpha: 0.5);
+      color: red;
+      text-align: center;
+    }
+    .info {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      a {
+        color: black;
+      }
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        transition: all 0.5s ease;
+        &:hover {
+          background-color: #e9f5f5;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .detail {
+    padding: 10px;
+    .name {
+      font-weight: 600;
+      text-transform: capitalize;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .price {
+      margin-top: 5px;
+      font-size: 14px;
+      text-align: center;
+      font-weight: 800;
+    }
+    .colors {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0;
+      .color {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 0px 5px;
+        border: solid 1px teal;
+      }
+    }
+  }
+  @media only screen and (max-width: 380px) {
+    width: calc(50% - 25px);
+  }
+}
+
+//---------------------------Mobile-------------------------------------
+@media only screen and (max-width: 739px) {
+  .productCard {
+    width: calc(50% - 25px);
+    .img {
+      min-width: 172px;
+      height: 230px;
+    }
+  }
+}

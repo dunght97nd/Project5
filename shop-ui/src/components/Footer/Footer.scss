@@ -1,0 +1,109 @@
+.footer {
+  display: flex;
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 0 50px;
+    .logo {
+      img {
+        max-height: 48px;
+        @media only screen and (max-width: 380px) {
+          max-height: 40px;
+        }
+      }
+    }
+    .desc {
+      font-size: 14px;
+      margin: 20px 0;
+    }
+    .socialContainer {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .socialIcon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: white;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+    }
+    @media only screen and (max-width: 380px) {
+      padding: 20px 10px;
+    }
+  }
+  .center {
+    flex: 1;
+    padding: 20px;
+    .title {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      .listItem {
+        font-size: 14px;
+        width: 50%;
+        margin-bottom: 10px;
+      }
+    }
+    @media only screen and (max-width: 380px) {
+      padding: 20px 10px;
+    }
+  }
+  .right {
+    flex: 1;
+    padding: 20px 50px 0 0;
+    .title {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .contactItem {
+      font-size: 14px;
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+    }
+    img {
+      width: 60%;
+      margin: 20px 0;
+    }
+    @media only screen and (max-width: 380px) {
+      background-color: #fff8f8;
+      padding: 20px 10px;
+    }
+  }
+  @media only screen and (max-width: 380px) {
+    flex-direction: column;
+  }
+}
+
+//---------------------------------Reponsive-------------------------------
+@media only screen and (max-width: 739px) {
+  .footer {
+    flex-direction: column;
+    .left {
+      padding: 20px 10px;
+      .logo {
+        img {
+          max-height: 40px;
+        }
+      }
+    }
+    .center {
+      padding: 20px 10px;
+    }
+    .right {
+      background-color: #fff8f8;
+      padding: 20px 10px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.starRating {
+  align-self: center;
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    span {
+      font-size: 40px;
+      margin-right: 5px;
+    }
+    &.on {
+      color: #ffc108;
+    }
+    &.off {
+      color: #ccc;
+    }
+  }
+}

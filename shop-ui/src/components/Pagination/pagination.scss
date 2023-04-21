@@ -1,0 +1,49 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #fff;
+  color: #383838;
+  padding: 10px 50px;
+  .list {
+    margin: 10px;
+    .item {
+      display: inline-block;
+      margin: 0 5px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+
+      &.active {
+        color: #fff;
+        background-color: teal;
+      }
+    }
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+    color: #383838;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.4;
+    }
+  }
+}
+//------------------------------Mobile reponsive----------------------------------
+@media only screen and (max-width: 739px) {
+  .pagination {
+    padding: 10px;
+  }
+}

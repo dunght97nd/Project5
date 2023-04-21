@@ -1,0 +1,130 @@
+.checkout {
+  .container {
+    h1 {
+      font-size: 30px;
+      padding: 20px 50px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px 50px;
+      .top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .topButton {
+          font-size: 14px;
+          padding: 12px;
+          color: black;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+      form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+        .info {
+          flex: 2;
+          .item {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+          }
+          .filter {
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            span {
+              margin-right: 10px;
+              min-width: 60px;
+            }
+            select {
+              height: 40px;
+              width: 200px;
+            }
+          }
+          .method {
+            font-size: 14px;
+            display: flex;
+
+            flex-direction: column;
+            .item {
+              span {
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+        .summary {
+          flex: 1;
+          border: 0.5px solid lightgray;
+          border-radius: 10px;
+          padding: 20px;
+
+          .summaryTitle {
+            font-size: 20px;
+            font-weight: 200;
+          }
+          .summaryItem {
+            font-size: 16px;
+            margin: 30px 0px;
+            display: flex;
+            justify-content: space-between;
+            .notice {
+              border: 1px solid teal;
+              font-size: 14px;
+              padding: 10px;
+            }
+          }
+          .summaryTotal {
+            margin: 30px 0px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 24px;
+            .summaryItemText,
+            .summaryItemPrice {
+              font-size: 18px;
+            }
+          }
+          button {
+            font-size: 16px;
+            width: 100%;
+            padding: 12px;
+            background-color: black;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+//-------------------------------Mobile Reponsive---------------------------------
+@media only screen and (max-width: 739px) {
+  .checkout {
+    .container {
+      h1 {
+        padding: 20px 10px;
+      }
+      .wrapper {
+        padding: 20px 10px;
+
+        form {
+          gap: 10px;
+        }
+      }
+    }
+  }
+}

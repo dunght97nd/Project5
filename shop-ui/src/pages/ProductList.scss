@@ -1,0 +1,17 @@
+.productList {
+  .title {
+    text-transform: capitalize;
+    padding: 30px 50px;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 739px) {
+  .productList {
+    .title {
+      padding: 20px 10px;
+    }
+  }
+}
