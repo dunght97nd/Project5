@@ -1,0 +1,180 @@
+.reviews {
+  padding: 50px;
+
+  .add {
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    border: 0.5px solid lightgray;
+    padding: 10px;
+    .right {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        font-size: 18px;
+      }
+      .stars {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        margin-bottom: 10px;
+        .star {
+          color: #ffc108;
+          height: 24px;
+          width: 24px;
+        }
+        span {
+          font-size: 16px;
+          font-weight: bold;
+          color: #ffc108;
+        }
+      }
+      span {
+        font-weight: 500;
+        font-size: 44px;
+        color: red;
+        padding: 5px;
+      }
+      .total {
+        font-size: 14px;
+        color: #939ca3;
+      }
+    }
+    .progressList {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      .progressItem {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+        font-size: 14px;
+
+        .star {
+          color: #ffc108;
+          font-size: 14px;
+        }
+      }
+    }
+    .addForm {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      textarea {
+        padding: 20px;
+        height: 100px;
+      }
+
+      .send {
+        width: 190px;
+        font-size: 14px;
+        padding: 14px;
+
+        font-weight: 500;
+
+        align-self: center;
+
+        border: none;
+        color: white;
+        background-color: teal;
+        cursor: pointer;
+      }
+    }
+  }
+
+  hr {
+    height: 0;
+    border: 0.5px solid lightgray;
+    margin: 25px 0px;
+  }
+}
+//-----------------------------Mobile Reposive-----------------------------------
+@media only screen and (max-width: 739px) {
+  .reviews {
+    padding: 20px 10px;
+
+    .add {
+      flex-direction: column;
+      .right {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        .title {
+          font-size: 18px;
+        }
+        .stars {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          margin-bottom: 10px;
+          .star {
+            color: #ffc108;
+            height: 24px;
+            width: 24px;
+          }
+          span {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffc108;
+          }
+        }
+        span {
+          font-weight: 500;
+          font-size: 44px;
+          color: red;
+          padding: 5px;
+        }
+        .total {
+          font-size: 14px;
+          color: #939ca3;
+        }
+      }
+
+      .addForm {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        textarea {
+          padding: 20px;
+          height: 100px;
+        }
+
+        .send {
+          width: 190px;
+          font-size: 14px;
+          padding: 14px;
+
+          font-weight: 500;
+
+          align-self: center;
+
+          border: none;
+          color: white;
+          background-color: teal;
+          cursor: pointer;
+        }
+      }
+    }
+
+    hr {
+      height: 0;
+      border: 0.5px solid lightgray;
+      margin: 25px 0px;
+    }
+  }
+}

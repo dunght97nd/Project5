@@ -1,0 +1,46 @@
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://traffic-edge10.cdn.vncdn.io/cdn-pos/be3159-662/bn/20220413_jqbMCPP8L1OG4UfbMPS8SM6K.png")
+      center;
+  background-size: cover;
+  .wrapper {
+    width: 40%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    .title {
+      font-size: 24px;
+      font-weight: 300;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 20px 0;
+
+      .agreement {
+        font-size: 12px;
+        margin: 20px 0px;
+      }
+      button {
+        width: 40%;
+        border: none;
+        padding: 15px 20px;
+        background-color: teal;
+        color: white;
+        cursor: pointer;
+      }
+    }
+    @media only screen and (max-width: 739px) {
+      width: 80%;
+    }
+  }
+}

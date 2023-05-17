@@ -1,0 +1,55 @@
+.newsletter {
+  padding: 30px 50px;
+  margin-top: 50px;
+  background-color: #fcf5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .desc {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    @media only screen and (max-width: 380px) {
+      text-align: center;
+    }
+  }
+  .inputContainer {
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+    input {
+      border: none;
+      flex: 8;
+      padding-left: 20px;
+    }
+    button {
+      flex: 1;
+      border: none;
+      background-color: teal;
+      color: white;
+    }
+    @media only screen and (max-width: 380px) {
+      width: 80%;
+    }
+  }
+}
+
+//------------------------------Mobile reponsive----------------------------------
+@media only screen and (max-width: 739px) {
+  .newsletter {
+    .desc {
+      text-align: center;
+    }
+    .inputContainer {
+      width: 100%;
+    }
+  }
+}

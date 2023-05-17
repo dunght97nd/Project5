@@ -1,0 +1,34 @@
+.categoryItem {
+  flex: 1;
+
+  height: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media only screen and (max-width: 380px) {
+      height: 20vh;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 16px;
+      color: black;
+    }
+    button {
+      border: none;
+      padding: 10px;
+      background-color: white;
+      color: gray;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  }
+}

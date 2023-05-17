@@ -1,0 +1,21 @@
+.home {
+  .container {
+    .title {
+      text-transform: uppercase;
+      text-align: center;
+      padding: 50px;
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
+}
+//------------------------------Reponsive----------------------------------
+@media only screen and (max-width: 739px) {
+  .home {
+    .container {
+      .title {
+        padding: 20px 10px;
+      }
+    }
+  }
+}

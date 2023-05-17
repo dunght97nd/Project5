@@ -1,0 +1,46 @@
+.conversations {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
+  .conversationsContainer {
+    .top,
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      h1 {
+        color: lightgray;
+        font-size: 18px;
+      }
+      table {
+        width: 100%;
+        text-transform: capitalize;
+        tr {
+          height: 50px;
+          th {
+            font-size: 16px;
+            padding: 10px;
+            text-align: left;
+          }
+          td {
+            padding: 10px;
+            font-size: 14px;
+            button {
+              background-color: teal;
+              color: white;
+              padding: 10px;
+              border: none;
+              cursor: pointer;
+            }
+          }
+          &.active {
+            background-color: #1dbf730f;
+          }
+        }
+      }
+    }
+  }
+}

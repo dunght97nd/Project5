@@ -1,0 +1,300 @@
+.navbar {
+  box-shadow: 0 3px 4px 0 rgb(0 0 0 / 10%);
+  text-transform: capitalize;
+  .wrapper {
+    padding: 6px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      flex: 1;
+      .menu {
+        display: none;
+      }
+      .logo {
+        max-height: 48px;
+        img {
+          max-height: 48px;
+        }
+      }
+    }
+
+    .center {
+      .nav {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > * ~ * {
+          margin-left: 10px;
+        }
+
+        .dropdown {
+          text-align: center;
+          width: 100%;
+          font-weight: 700;
+          position: relative;
+          z-index: 999;
+          font-size: 14px;
+          list-style-type: none;
+          .dropdownItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+              display: block;
+              min-width: 100px;
+              text-transform: uppercase;
+              color: black;
+              padding: 12px;
+            }
+            .arrowForward {
+              display: none;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            z-index: 999;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            transition: width 0.5s ease;
+            height: 2px;
+            background-color: teal;
+          }
+
+          &.active::after,
+          &:hover::after {
+            width: 100%;
+          }
+
+          .dropdownContent {
+            position: absolute;
+            z-index: 1000;
+            top: 50px;
+            left: 0;
+            background-color: #eee;
+            list-style: none;
+            width: 200px;
+            display: none;
+            box-shadow: 0 3px 4px 0 rgb(0 0 0 / 10%);
+            &::before {
+              content: "";
+              position: absolute;
+              top: -20px;
+              left: 00px;
+              width: 60px;
+              height: 20px;
+            }
+            .dropdownContentItem {
+              font-size: 14px;
+              a {
+                display: block;
+                text-align: left;
+                color: black;
+                padding: 12px;
+              }
+              &:hover {
+                background-color: teal;
+                a {
+                  color: white;
+                }
+              }
+            }
+          }
+          &:hover .dropdownContent {
+            display: block;
+          }
+        }
+        .close {
+          display: none;
+        }
+
+        &.active {
+          display: flex;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex: 1;
+      .searchContainer {
+        width: 50%;
+        border: 0.5px solid lightgray;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        padding: 6px;
+        position: relative;
+
+        .searchInput {
+          width: 100%;
+          border: none;
+          outline: none;
+        }
+        .searchProduct {
+          font-size: 0;
+          border: none;
+          background: url("https://krik.vn/tp/T0298/img/tmp/search.svg");
+          width: 22px;
+          height: 22px;
+          position: absolute;
+          z-index: 1;
+          right: 8px;
+          top: 5px;
+          cursor: pointer;
+        }
+      }
+
+      .menuItem {
+        font-size: 14px;
+        cursor: pointer;
+        margin: 0 10px;
+
+        a {
+          color: black;
+        }
+        .userLogin {
+          position: relative;
+          .userLoginIcon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+          .userLoginList {
+            display: flex;
+            // display: none;
+
+            // padding: 6px 12px;
+            border-radius: 6px;
+            border: 0.5px solid lightgray;
+            width: 160px;
+            position: absolute;
+
+            z-index: 4;
+            background-color: white;
+            top: 38px;
+            right: -4px;
+
+            align-items: center;
+            flex-direction: column;
+            .userLoginItem {
+              font-size: 14px;
+              font-weight: 600;
+              color: black;
+              width: 100%;
+              padding: 12px;
+              &:hover {
+                background-color: teal;
+                color: white;
+              }
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              top: -16px;
+              right: 8px;
+              border: 8px solid #0000;
+              border-bottom: 8px solid rgba($color: #000000, $alpha: 0.1);
+            }
+            // &.active {
+            //   display: flex;
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------Mobile Reponsive------------------------------------
+@media only screen and (max-width: 739px) {
+  .navbar {
+    .wrapper {
+      padding: 5px 10px;
+
+      .left {
+        .menu {
+          display: block;
+          font-size: 30px;
+        }
+        .logo {
+          img {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .center {
+        .nav {
+          flex-direction: column;
+          background-color: teal;
+          position: absolute;
+          z-index: 999;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100vh;
+          justify-content: flex-start;
+          padding-top: 60px;
+          display: none;
+          transition: transform 0.5s ease;
+          .dropdown {
+            margin: 0;
+            text-align: left;
+            .dropdownItem {
+              padding: 0 10px;
+              .arrowForward {
+                display: block;
+                font-size: 20px;
+              }
+            }
+            .dropdownContent {
+              position: unset;
+              background-color: teal;
+              width: 100%;
+
+              .dropdownContentItem {
+                padding: 0 10px;
+              }
+            }
+          }
+          .close {
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: 12px;
+            font-size: 30px;
+          }
+        }
+      }
+
+      .right {
+        flex: 2;
+        justify-content: space-between;
+        .searchContainer {
+          width: 50%;
+          margin: 0 10px;
+        }
+        .menuItem {
+          font-size: 13px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------Tablet Reponsive------------------------------------
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+}
